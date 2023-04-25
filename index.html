@@ -1,1 +1,53 @@
-<p>idk</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Nucleus Game Launcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="script.js"></script>
+  <style type="text/css">
+    
+    .MainText {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 50px;
+      transform: translateY(-9%);
+      font-weight: 800;
+      color: white;
+    }
+    
+    body {
+      background-image: url("https://i.ibb.co/r5H7TMK/download-25.jpg");
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+<style>
+
+</style>
+  <center>
+    <div class='MainHeaders' id=`'MainHeaders'>
+      <b><p class="MainText" id="MainText">Game Launcher</p></b>
+    </div>
+  </center>
+  
+  <script type="text/javascript">
+    var textElement = document.getElementById("MainText");
+    var originalFontSize = parseInt(window.getComputedStyle(textElement).getPropertyValue("font-size"));
+    textElement.style.fontSize = (originalFontSize / 2) + "px";
+    var animationInterval = setInterval(function() {
+      var currentFontSize = parseInt(window.getComputedStyle(textElement).getPropertyValue("font-size"));
+      if (currentFontSize >= originalFontSize) {
+        clearInterval(animationInterval);
+      } else {
+        var newFontSize = currentFontSize + 1;
+        textElement.style.fontSize = newFontSize + "px";
+      }
+    }, 10);
+  </script>
+
+     
+</body>
+
+</html>
